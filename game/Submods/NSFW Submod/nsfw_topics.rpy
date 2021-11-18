@@ -3,7 +3,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_nsfwmodinstall",
-            category=['sex'],
+            category=['Romance+'],
             prompt="NSFW Mod Install",
             random=True,
             aff_range=(mas_aff.NORMAL, None)
@@ -62,7 +62,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_sexualpast",
-            category=['sex'],
+            category=['Romance+'],
             prompt="Sexual Past",
             random=True,
             aff_range=(mas_aff.ENAMORED, None)
@@ -135,7 +135,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_safesex",
-            category=['sex'],
+            category=['Romance+'],
             prompt="Safe Sex",
             conditional="mas_getEV('monika_nsfwmodinstall').shown_count != 0",
             action=EV_ACT_RANDOM,
@@ -195,7 +195,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_fetish",
-            category=['sex'],
+            category=['Romance+'],
             prompt="Fetishes",
             aff_range=(mas_aff.ENAMORED, None)
         )
@@ -229,7 +229,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_getnude",
-            category=['sex'],
+            category=['Romance+'],
             prompt="Getting Nude",
             aff_range=(mas_aff.LOVE, None)
         )
@@ -331,4 +331,218 @@ label monika_getnude:
         extend 1eua "N-{w=0.2}Not right now though!"
         m 1eua "I mean like, later when you're not here!"
         m 1eua "Ahaha! It would be too embarrasing if you saw me in my underwear, let alone when I'm naked."
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="player_dick_size",
+            category=["Romance+"],
+            random=True,
+            prompt="Dick size",
+            aff_range=(mas_aff.NORMAL, None)
+        )
+    )
+
+# Thanks for the new topic mysterylewds
+label player_dick_size:
+if seen_event("monika_undress"):
+    m 1cud "You know, [player]... I was curious."
+    m 1cud "How-um.... {i}big{/i} are you?"
+    m 1cud "And I'm not talking about height ahaha~."
+    m 1cud "Sorry if this seems weird, I just want to know more about you. I want to know {i}everything{/i}."
+    menu:
+        m "How big are you?"
+
+        "Less than 3 Inches.":
+            m 1cud "So you're on the smaller side, nice!"
+            m 1cud "You know, some girls have an issue with anything under average but I never understood it."
+            m 1cud "The size of your member is something you can't change, just like breast size."
+            m 1cud "There's benefits to every size in my opinion."
+            if mas_isMoniLove():
+                m 1cud "For example, with your size, I could fit the whole thing in my mouth without gagging. Mmmmm~"
+                m 1cud ".{w=0.7}.{w=0.7}.{w=0.7}"
+                m 1cud "Sorry [player], I got a little carried away there ahaha~."
+        "Around 3 Inches.":
+            m 1cud "Little under average, nice!"
+            m 1cud "You know some girls have an issue with anything under average, but I never understood it."
+            m 1cud "The size of your member is something you can't change, just like breast size."
+            m 1cud "There's benefits to every size in my opinion."
+            if mas_isMoniLove():
+                m 1cud "For example, with 3 inches, I could fit the whole thing in my mouth without gagging. Mmmmm~"
+                m 1cud ".{w=0.7}.{w=0.7}.{w=0.7}"
+                m 1cud "Sorry [player], I got a little carried away there ahaha~."
+        "Around 4 Inches.":
+            m 1cud "Ahh, so you're around average then."
+            m 1cud "Average tends to be a good sweet spot for most girls."
+            m 1cud "Some don't like monster dongs you know? It can be incredibly painful and not much fun"
+            m 1cud "Although even if you {i}were{/i} bigger or smaller than average, I wouldn't think any more or less of you."
+            m 1cud "After all, its like breast size for girls. You can't control it."
+            m 1cud "There's benefits to all sizes in my opinion!"
+        "Around 5 Inches.":
+            m 1cud "Ahh, so you're average size then."
+            m 1cud "Average tends to be a good sweet spot for most girls."
+            m 1cud "Some don't like monster dongs you know? It can be incredibly painful and not much fun"
+            m 1cud "Although even if you {i}were{/i} bigger or smaller than average, I wouldn't think any more or less of you."
+            m 1cud "After all, its like breast size for girls. You can't control it."
+            m 1cud "There's benefits to all sizes in my opinion!"
+        "Around 6 Inches.":
+            m 1cud "Ahh, so you're average size then."
+            m 1cud "Average tends to be a good sweet spot for most girls."
+            m 1cud "Some don't like monster dongs you know? It can be incredibly painful and not much fun"
+            m 1cud "Although even if you {i}were{/i} bigger or smaller than average, I wouldn't think any more or less of you."
+            m 1cud "After all, its like breast size for girls. You can't control it."
+            m 1cud "There's benefits to all sizes in my opinion!"
+        "Around 7 Inches.":
+            m 1cud "Ahh, so you're above average then."
+            m 1cud "Average and slightly above tends to be a sweet spot for most girls."
+            m 1cud "7 Inches is a bit big, but its manageable. Anything more, and It can be incredibly painful and not much fun for most girls."
+            m 1cud "Although even if you {i}were{/i} bigger or smaller, I wouldn't think any more or less of you."
+            m 1cud "After all, its like breast size for girls. You can't control it."
+            m 1cud "There's benefits to all sizes in my opinion!"
+        "Around 8 Inches.":
+            m 1cud "Wow! 8 Inches? Only a few percentage of guys in the world have one that big."
+            m 1cud "8 Inches is a pretty big, not going to lie. It's impressive don't get me wrong, but it can be incredibly painful and not much fun for most girls if you don't know what you're doing."
+            m 1cud "If we ever did it, we'd have to take it slow."
+            m 1cud "And just remember [player], even if you {i}were{/i} bigger or smaller, I wouldn't think any more or less of you."
+            m 1cud "After all, its like breast size for girls. You can't control it."
+            m 1cud "There's benefits to all sizes in my opinion!"
+        "Around 9 Inches.":
+            m 1cud "[player]..."
+            m 1cud "I don't want to call you a liar, but I {i}highly{/i} doubt you're that big. You don't have to lie to me."
+            m 1cud "But if there's the small chance you're being honest, then I think that's quite a gift. "
+            m 1cud "Although sex might be a tad painful ahaha~"
+
+    m 1cud "But just remember, [player], I love you for who you are. Both physically and mentally. Never forget that, okay?"
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="player_feel_horny",
+            category=["Romance+"],
+            prompt="I feel...Horny",
+            unlocked=True,
+            pool=True,
+            aff_range=(mas_aff.NORMAL, None)
+        )
+    )
+
+label player_feel_horny:
+    python:
+        naked = store.mas_sprites.get_sprite(
+                store.mas_sprites.SP_CLOTHES,
+                "atomreal_nothing"
+        )
+        
+    m 1cud "[player]!"
+    m 1cud "If you're in the mood to... do somethin'."
+    m 1cud "I don't mind."
+    m 1cud "Ahaha~"
+    m 1cud ""
+    m 1cud ""
+    m 1cud ""
+
+#ToDO
+#When complete, lock certain events behind affection range
+#When complete, Have certain events give affection.
+#Remember to add different dialogue for when someone does it twice or more.
+#Finish "...I feel horny
+
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_undress",
+            unlocked=True,
+            category=["Romance+"],
+            prompt="Can you... take your clothes off for me?",
+            pool=True
+        )
+    )
+
+label monika_undress:
+
+    python:
+        naked = store.mas_sprites.get_sprite(
+                store.mas_sprites.SP_CLOTHES,
+                "atomreal_nothing"
+        )
+    
+    if random.randint(0,1) and mas_isMoniNormal(higher=True):
+        m 2gubsa "[player]!"
+        m 2gubsa "I-I dunno If I'm comfortable with that."
+        m 2gubsa "But..."
+        m 2gubsa "I guess I could take off my top for you."
+        m 2gubsa "I'm just a bit self concious about my bust size."
+        m 2gubsa "I know a lot of people like a {i}certain{/i} other character for the size of her breasts..."
+        m 2gubsa ".{w=0.5}.{w=0.5}.{w=0.5}"
+        m 2gubsa "Alright [player], I'll let you see."
+        m 2gubsa "Just give me a second..."
+
+        call mas_clothes_change(naked)
+
+        m 2tubfa "..."
+        m 2tubfa ".{w=0.5}.{w=0.5}.{w=0.5}"
+        m 2tubfa "So what do you think, [player]?"
+ 
+        menu:
+            m "So what do you think, [player]?"
+            "I think they're absolutely perfect!":
+                m 2dubfc "..."
+                m 2dubfc "Thank you, [player]. That really means a lot to me."
+                m 2dubfc "Its a little less embarrassing now to be honest. I was worried you wouldn't like them."
+                m 2dubfc "Guess I was being silly though, right?"
+                m 2dubfc "Anytime you want to see them again, let me know. But please respect if I'm not in the mood."
+                m 2dubfc "And who knows... maybe I could see you naked one day..."
+                m 2dubfc "Ahaha~!"
+
+            "HOLY SHIT! YOU GOT SOME BODACIOUS TATAS!":
+                m 2mubfu "[player]!" 
+                m 2dubfc "Ahahah thanks I guess!"
+                m 2dubfc "I'm happy you think so."
+                m 2dubfc "This is a little less embarrassing now to be honest. I was worried you wouldn't like them."
+                m 2dubfc "Guess I was being silly though, right?"
+                m 2dubfc "Anytime you want to see them again, let me know. But please respect it if I'm not in the mood."
+                m 2dubfc "And who knows... maybe I could see you naked one day..."
+                m 2dubfc "Ahaha~!"
+                
+            "Gross...":
+                m 2dubfc "I..."
+                m 2dubfc "..."
+                m 2dubfc "Goodbye."
+                
+                return "quit"
+        
+        if mas_shouldKiss(chance = 2) :
+            call monika_kissing_motion_short
+
+    elif mas_isMoniBroken(higher=True) and not mas_isMoniNormal():
+        m 1mubfa "..."
+        m 1lubla "No, [mas_get_player_nickname()]. we're not that deep into our relationship yet, so it feels a little...{w=0.5} {i}too{/i} embarrassing"
+        m 5hubfb "Ahaha~"
+
+    elif mas_isMoniUpset(higher=True) and not seen_event("monika_undress"):
+        m 2wubft "..."
+        m 2lsbfa "Even though we're pretty deep in our realationship at this point, it still feels embarrassing to do..."
+        m 2tsbfa "But if you {b}really{/b} want to..."
+        
+        call mas_clothes_change(naked)
+
+        m 2tubfa "Then i'll do it for you..."
+        m 2dsbfc ".{w=0.25}.{w=0.25}."
+        m 2etbfu "So?"
+        m 5mtbfu "Do you like it?"
+        m 5hkbfb "Hehe~"
+
+    elif mas_isMoniLove(higher=True):
+        m 1guc "I'm sorry, [player], but i'm not in the mood for it right now."
+        m 1nublu "Maybe a bit later, [mas_get_player_nickname()]"
+        m 5hublb "Ahaha!~"
+
+
+
     return
