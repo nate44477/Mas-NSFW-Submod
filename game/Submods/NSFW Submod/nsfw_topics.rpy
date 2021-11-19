@@ -333,6 +333,7 @@ label monika_getnude:
         m 1eua "Ahaha! It would be too embarrasing if you saw me in my underwear, let alone when I'm naked."
     return
 
+# Thanks for the new topic mysterylewds
 init 5 python:
     addEvent(
         Event(
@@ -345,7 +346,6 @@ init 5 python:
         )
     )
 
-# Thanks for the new topic mysterylewds
 label player_dick_size:
 if seen_event("monika_undress"):
     m 1cud "You know, [player]... I was curious."
@@ -417,6 +417,7 @@ if seen_event("monika_undress"):
     m 1cud "But just remember, [player], I love you for who you are. Both physically and mentally. Never forget that, okay?"
     return
 
+# Thanks for the new topic mysterylewds
 init 5 python:
     addEvent(
         Event(
@@ -444,33 +445,22 @@ label player_feel_horny:
     m 1cud ""
     m 1cud ""
     m 1cud ""
+    return
 
-#ToDO
-#When complete, lock certain events behind affection range
-#When complete, Have certain events give affection.
-#Remember to add different dialogue for when someone does it twice or more.
-#Finish "...I feel horny
-
-
+# Thanks for the new topic mysterylewds
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
-            eventlabel="monika_undress",
-            unlocked=True,
-            category=["Romance+"],
-            prompt="Can you... take your clothes off for me?",
+            persistent.event_database,                                  #ToDO
+            eventlabel="monika_undress",                                #When complete, lock certain events behind affection range
+            unlocked=True,                                              #When complete, Have certain events give affection.
+            category=["Romance+"],                                      #Remember to add different dialogue for when someone does it twice or more.
+            prompt="Can you... take your clothes off for me?",          #Finish "...I feel horny
             pool=True
         )
     )
 
 label monika_undress:
-
-    python:
-        naked = store.mas_sprites.get_sprite(
-                store.mas_sprites.SP_CLOTHES,
-                "atomreal_nothing"
-        )
     
     if random.randint(0,1) and mas_isMoniNormal(higher=True):
         m 2gubsa "[player]!"
@@ -483,7 +473,7 @@ label monika_undress:
         m 2gubsa "Alright [player], I'll let you see."
         m 2gubsa "Just give me a second..."
 
-        call mas_clothes_change(naked)
+        mas_nsfw.wear_birthdaysuit("2gubsa")
 
         m 2tubfa "..."
         m 2tubfa ".{w=0.5}.{w=0.5}.{w=0.5}"
