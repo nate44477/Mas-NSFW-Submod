@@ -213,7 +213,7 @@ init 5 python:
             prompt="Fetishes",
             conditional="renpy.seen_label('monika_nsfwmodinstall')",
             action=EV_ACT_RANDOM,
-            aff_range=(mas_aff.ENAMORED, None)
+            aff_range=(mas_aff.LOVE, None)
         )
     )
 
@@ -271,7 +271,7 @@ init 5 python:
             prompt="Sexting",
             conditional="renpy.seen_label('monika_nsfwmodinstall')",
             action=EV_ACT_RANDOM,
-            aff_range=(mas_aff.ENAMORED, None)
+            aff_range=(mas_aff.LOVE, None)
         )
     )
 
